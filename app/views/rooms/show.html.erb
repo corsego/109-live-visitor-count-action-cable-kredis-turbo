@@ -1,5 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
+<%= turbo_stream_from @room, channel: RoomChannel, params: { room_id: @room.id } %>
+
+People inside this room: <span id="room-<%= params[:room_id]%>-counter"></span>
+
 <%= render @room %>
 
 <div>

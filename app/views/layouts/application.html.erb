@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <%= turbo_stream_from :onliners, channel: OnlineChannel %>
+    Current website visitors: <span id='online-counter'></span>
+
     <%= yield %>
   </body>
 </html>
